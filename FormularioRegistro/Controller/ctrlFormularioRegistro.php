@@ -20,7 +20,6 @@
     $DireccionGeneral = $_POST['formDirGene'];
     $Direccion = $_POST['formDirecion'];
     $Subdireccion = $_POST['formSubdireccion'];
-    $UnidadDepartamento = $_POST['formUnidadDepartamental'];
     $jud = $_POST['formJud'];
     $rubro = $_POST['formRubro'];
     $Actividades = $_POST['formActi'];
@@ -96,7 +95,6 @@
         $DireccionGeneral,
         $Direccion,
         $Subdireccion,
-        $UnidadDepartamento,
         $jud,
         $rubro,
         $Actividades,
@@ -167,7 +165,7 @@
         echo "<br/>";
 
         
-        $sql = "INSERT INTO dbo.RegistrosTlalpan
+        $query = "INSERT INTO dbo.RegistrosTlalpan
         (codigoProyecto
         ,nombreProyecto
         ,descripcionProyecto
@@ -231,71 +229,77 @@
         ,areaAutoriza
         ,nombreAutoriza)
         VALUES
-        (?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?
-        ,?)";
-        
-        $stmt = sqlsrv_query( $conn, $sql, $param);
+        ('$param[0]'
+        ,'$param[1]'
+        ,'$param[2]'
+        ,'$param[3]'
+        ,'$param[4]'
+        ,'$param[5]'
+        ,'$param[6]'
+        ,'$param[7]'
+        ,'$param[8]'
+        ,'$param[9]'
+        ,'$param[10]'
+        ,'$param[11]'
+        ,'$param[12]'
+        ,'$param[13]'
+        ,'$param[14]'
+        ,'$param[15]'
+        ,'$param[16]'
+        ,'$param[17]'
+        ,'$param[18]'
+        ,'$param[19]'
+        ,'$param[20]'
+        ,'$param[21]'
+        ,'$param[22]'
+        ,'$param[23]'
+        ,'$param[24]'
+        ,'$param[25]'
+        ,'$param[26]'
+        ,'$param[27]'
+        ,'$param[28]'
+        ,'$param[29]'
+        ,'$param[30]'
+        ,'$param[31]'
+        ,'$param[32]'
+        ,'$param[33]'
+        ,'$param[34]'
+        ,'$param[35]'
+        ,'$param[36]'
+        ,'$param[37]'
+        ,'$param[38]'
+        ,'$param[39]'
+        ,'$param[40]'
+        ,'$param[41]'
+        ,'$param[42]'
+        ,'$param[43]'
+        ,'$param[44]'
+        ,'$param[45]'
+        ,'$param[46]'
+        ,'$param[47]'
+        ,'$param[48]'
+        ,'$param[49]'
+        ,'$param[50]'
+        ,'$param[51]'
+        ,'$param[52]'
+        ,'$param[53]'
+        ,'$param[54]'
+        ,'$param[55]'
+        ,'$param[56]'
+        ,'$param[57]'
+        ,'$param[58]'
+        ,'$param[59]'
+        ,'$param[60]'
+        ,'$param[61]')";
 
+        $sql = utf8_decode($query);
+        
+        echo $sql;
+        echo "<br/>";
+
+        $stmt = sqlsrv_query( $conn, $sql);
+
+        echo $stmt;
 
         if( $stmt === false ) {
             die( print_r( sqlsrv_errors(), true));
