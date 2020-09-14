@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<head>
+    <meta lang="es">
+    <meta charset="UTF-8">
+    <title>Formulario Registro</title>
+    <link rel="stylesheet" href="../Style/StyleSheet.css" />
+</head>
+<body>
+    
+    <section class="form-register">
+        <h4>Formulario de Registro</h4>
+        <form id="frmRegistro" method="POST" action="../Controller/ctrlFormularioRegistro.php">
+            <div>
+                <h2>1-. Datos Generales</h2>
+                <input class="form-control" type="text" name="frmIdP" placeholder="Código del proyecto *"/>
+                <input class="form-control" type="text"  name="frmNombreP" placeholder="Nombre del proyecto *" />
+                <textarea class="form-control" name="frmDescripcionP" placeholder="Descripción del proyecto"></textarea>
+            </div>
+            <div>
+                <h2>2-. Beneficios y Beneficiarios</h2>
+                <textarea class="form-control" name="formBenEspe" placeholder="Beneficios Esperados *"></textarea>
+                <h4>Población Beneficiada</h4>
+                <input class="form-control" type="text" name="formNumMujeres" placeholder="Número de Mujeres"/>
+                <input class="form-control" type="text" name="formNumHombres" placeholder="Número de Hombres"/>
+                <input class="form-control" type="text" name="formNumViviendas" placeholder="Número de Viviendas"/>
+            </div>
+            <div>
+                <h2>3-. Alineación con el Catálogo de Proyectos (Ficha Origen)</h2>
+                
+                <h4>Metas físicas</h4>
+                <input class="form-control" type="text" name="formUnidadMed" placeholder="Unidad de medida*"/>
+                <input class="form-control" type="text" name="formAnual" placeholder="Anual*"/>
+                <input class="form-control" type="text" name="formTrim1" placeholder="Trim 1"/>
+                <input class="form-control" type="text" name="formTrim2" placeholder="Trim 2"/>
+                <input class="form-control" type="text" name="formTrim3" placeholder="Trim 3"/>
+                <input class="form-control" type="text" name="formTrim4" placeholder="Trim 4"/>
+            </div>
+            <div>
+                <h2>4-. Administración del proyecto</h2>
+                <input class="form-control" type="text" name="formDirGene" placeholder="Dirección (es) General (es)*"/>
+                <input class="form-control" type="text" name="formDirecion" placeholder="Dirección" />
+                <input class="form-control" type="text" name="formSubdireccion" placeholder="Subdirección" />
+                <input class="form-control" type="text" name="formUnidadDepartamental" placeholder="Jefatura de Unidad Departamental" />
+                <input class="form-control" type="text" name="formJud" placeholder="JUD" />
+                <input class="form-control" type="text" name="formRubro" placeholder="Rubro" />
+                <input class="form-control" type="text" name="formActi" placeholder="Actividades*" />
+            </div>
+            <div>
+                <h2>5-. Domicilio geográfico (para obras viales, agua potable y drenaje se necesitará solo la colonia)</h2>
+                <input class="form-control" type="text" name="formCalle" placeholder="Calle*"/>
+                <input class="form-control" type="text" name="formNumExt" placeholder="Número exterior*" />
+                <input class="form-control" type="text" name="formNumInt" placeholder="Número interior" />
+                <input class="form-control" type="text" name="formRef" placeholder="Referencias"/>
+                <input class="form-control" type="text" name="formCol" placeholder="Colonia*" />
+                <input class="form-control" type="text" name="formCP" placeholder="Código postal*" />
+            </div>
+            <div>
+                <h2>6-. Justificación de los trabajos o apoyo</h2>
+                <textarea class="form-control" name="formJusTraApo" placeholder="Verificar si es necesaria la justificación a nivel obra o ficha origen"></textarea>
+            </div>
+            <div>
+                <h2>7-. Presupuesto de los trabajos</h2>
+                <table>
+                    <tr>
+                        <td>Año</td>
+                        <td>Obra</td>
+                        <td>Supervisión (4.8%)</td>
+                        <td>Total</td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-control" type="text" name="idAnio" placeholder="Año*" /></td>
+                        <td><input class="form-control" type="text" name="idObra" placeholder="Obra" /></td>
+                        <td><input class="form-control" type="text" name="idSpr" placeholder="Supervisión (4.8%)" /></td>
+                        <td><input class="form-control" type="text" name="idTotal" placeholder="Total"/></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>8-. Fuentes de financiamiento</h2>
+                <table>
+                     <tr>
+                        <td>Tipo de recurso</td>
+                        <td>Monto planeado ($)</td>
+                    </tr>
+                    <tr>
+                        <td>Recurso Deuda</td>
+                        <td><input class="form-control" type="text" name="idRecDeud" /></td>
+                    </tr>
+                    <tr>
+                        <td>Recurso Fiscal </td>
+                        <td><input class="form-control" type="text" name="idRecFisc" /></td>
+                    </tr>
+                    <tr>
+                        <td>Recurso FAIS </td>
+                        <td><input class="form-control" type="text" name="idRecFais" /></td>
+                    </tr>
+                    <tr>
+                        <td>Recurso FORTAMUN</td>
+                        <td><input class="form-control" type="text" name="idRecFortamun" /></td>
+                    </tr>
+                    <tr>
+                        <td>Recurso FAFEF</td>
+                        <td><input class="form-control" type="text" name="idRecFafef" /></td>
+                    </tr>
+                    <tr>
+                        <td>Participaciones Federales</td>
+                        <td><input class="form-control" type="text" name="idParFede" /></td>
+                    </tr>
+                    <tr>
+                        <td>Convenio (p.e. SEDECO)</td>
+                        <td><input class="form-control" type="text" name="idConvenio" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td><input class="form-control" type="text" name="idFuenteFinTotal" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <h2>9-. Calendario de ejecución (presupuesto)</h2>
+                <table>
+                    <tr>
+                        <td>Importe</td>
+                        <td>Mes 1</td>
+                        <td>Mes 2</td>
+                        <td>Mes 3</td>
+                        <td>Mes 4</td>
+                        <td>Mes 5</td>
+                        <td>Mes 6</td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje</td>
+                        <td><input class="form-control" type="text" name="idPorcentajeMes1" /></td>
+                        <td><input class="form-control" type="text" name="idPorcentajeMes2" /></td>
+                        <td><input class="form-control" type="text" name="idPorcentajeMes3" /></td>
+                        <td><input class="form-control" type="text" name="idPorcentajeMes4" /></td>
+                        <td><input class="form-control" type="text" name="idPorcentajeMes5" /></td>
+                        <td><input class="form-control" type="text" name="idPorcentajeMes6" /></td>
+                    </tr>
+                    <tr>
+                        <td>Monto En Pesos</td>
+                        <td><input class="form-control" type="text" name="idMontoMes1" /></td>
+                        <td><input class="form-control" type="text" name="idMontoMes2" /></td>
+                        <td><input class="form-control" type="text" name="idMontoMes3" /></td>
+                        <td><input class="form-control" type="text" name="idMontoMes4" /></td>
+                        <td><input class="form-control" type="text" name="idMontoMes5" /></td>
+                        <td><input class="form-control" type="text" name="idMontoMes6" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>10-. Periodo de ejecución y fechas estimadas (días calendario)</h2>
+                <input class="form-control" type="text" name="idPlzEje" placeholder="Plazo de ejecución*"/>
+                <input class="form-control" type="text" name="idFechaInicio" placeholder="Fecha Inicio*"/>
+                <input class="form-control" type="text" name="idFechaFin" placeholder="Fecha Termino*"/>
+            </div>
+            <div>
+                <h2>11-. Número de empleos generados</h2>
+                <input class="form-control" type="text" name="idTotalEmpGen" placeholder="Total de empleos generados*" />
+                <input class="form-control" type="text" name="idDirectos" placeholder="Directos*" />
+                <input class="form-control" type="text" name="idIndirectos" placeholder="Indirectos*" />
+            </div>
+            <div>
+                <h2>12-. Datos del Personal</h2>
+                <input class="form-control" type="text" name="areaElabora" placeholder="Área que Elaboro" />
+                <input class="form-control" type="text" name="nombreElabora" placeholder="Persona que Elaboro" />
+                <input class="form-control" type="text" name="areaRevisa" placeholder="Área que Reviso" />
+                <input class="form-control" type="text" name="nombreRevisa" placeholder="Persona que Reviso" />
+                <input class="form-control" type="text" name="areaAutoriza" placeholder="Área que Autoriza" />
+                <input class="form-control" type="text" name="nombreAutoriza" placeholder="Persona que Autoriza" />
+            </div>
+            <input class="form-button" type="submit" value="Enviar" />
+        </form>
+    </section>
+</body>
+</html>
