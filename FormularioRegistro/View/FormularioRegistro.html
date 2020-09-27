@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <title>Formulario Registro</title>
     <link rel="stylesheet" href="../Style/StyleSheet.css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-    
+    <header>
+		<div class="wrapper">
+			<div class="logo">Registros Tlalpan</div>
+			<nav>
+				<a href="index.html">Inicio</a>
+				<a href="FormularioRegistro.html">Registrar</a>
+				<a href="FormularioConsultar.html">Consultar</a>
+				<a href="#">Modificar</a>
+			</nav>
+		</div>
+	</header>
     <section class="form-register">
         <h4>Formulario de Registro</h4>
         <form id="frmRegistro" method="POST" action="../Controller/ctrlFormularioRegistro.php">
@@ -29,7 +40,31 @@
                 <h2>3-. Alineación con el Catálogo de Proyectos (Ficha Origen)</h2>
                 
                 <h4>Metas físicas</h4>
-                <input class="form-control" type="text" name="formUnidadMed" placeholder="Unidad de medida*"/>
+                <!--<input class="form-control" type="text" name="formUnidadMed" placeholder="Unidad de medida*"/>-->
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <h4>Unidad de medida</h4>
+                            </td>
+                            <td>
+                                <select name="formUnidadMed" class="form-control">
+                                    <option>Inmueble</option>
+                                    <option>Metro Cuadrado</option>
+                                    <option>Metro Lineal</option>
+                                    <option>Obra</option>
+                                    <option>Plantel</option>
+                                    <option>Planteles</option>
+                                    <option>Viviendas</option>
+                                    <option>Metro Cúbico</option>
+                                    <option>Metro Cuadrado</option>
+                                    <option>Metro Lineal</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
                 <input class="form-control" type="text" name="formAnual" placeholder="Anual*"/>
                 <input class="form-control" type="text" name="formTrim1" placeholder="Trim 1"/>
                 <input class="form-control" type="text" name="formTrim2" placeholder="Trim 2"/>
@@ -41,8 +76,82 @@
                 <input class="form-control" type="text" name="formDirGene" placeholder="Dirección (es) General (es)*"/>
                 <input class="form-control" type="text" name="formDirecion" placeholder="Dirección" />
                 <input class="form-control" type="text" name="formSubdireccion" placeholder="Subdirección" />
-                <input class="form-control" type="text" name="formJud" placeholder="JUD" />
+                
+                <!--<input class="form-control" type="text" name="formJud" placeholder="JUD" />-->
+                <table>
+                    <tr>
+                        <td>
+                            <h4>JUD</h4>
+                        </td>
+                        <td>
+                            <select class="form-control" name="formJud">
+                                <option>Construcción de edificios públicos</option>
+                                <option>Construcción de obras para saneamiento y drenaje</option>
+                                <option>Infraestructura de planteles educativos</option>
+                                <option>Mantenimiento a edificios públicos</option>
+                                <option>Obras hidráulicas</option>
+                                <option>Obras viales</option>
+                                <option>Construcción de edificios públicos</option>
+                                <option>Construcción de obras para saneamiento y drenaje</option>
+                                <option>Infraestructura de planteles educativos</option>
+                                <option>Mantenimiento a edificios públicos</option>
+                                <option>Obras hidráulicas</option>
+                                <option>Obras viales</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
                 <input class="form-control" type="text" name="formRubro" placeholder="Rubro" />
+                <table>
+                    <tr>
+                        <td><h4>Rubro</h4></td>
+                        <td>
+                            <select class="form-control">
+                                <option>Banquetas de concreto estampado</option>
+                                <option>Cárcamo</option>
+                                <option>Catastro</option>
+                                <option>Concreto estampado</option>
+                                <option>Concreto hidráulico (paso peatonal)</option>
+                                <option>Construcción</option>
+                                <option>Construcción de banquetas y barandal</option>
+                                <option>Construcción de edificios administrativos</option>
+                                <option>Construcción de edificios culturales</option>
+                                <option>Construcción de edificios de salud</option>
+                                <option>Construcción de espacios deportivos</option>
+                                <option>Construcción de espacios recreativos</option>
+                                <option>Construcción de infraestructura pública</option>
+                                <option>Construcción de mercados</option>
+                                <option>Drenaje</option>
+                                <option>Empedrado</option>
+                                <option>Escalinatas</option>
+                                <option>Iluminación en ciclovía</option>
+                                <option>Mantenimiento a casas de salud</option>
+                                <option>Mantenimiento</option>
+                                <option>Mantenimiento a deportivos</option>
+                                <option>Mantenimiento a edificios de desarrollo social</option>
+                                <option>Mantenimiento a edificios públicos</option>
+                                <option>Mantenimiento a espacio público</option>
+                                <option>Mantenimiento a inmuebles culturales</option>
+                                <option>Mantenimiento a mercados</option>
+                                <option>Mantenimiento y rehabilitación</option>
+                                <option>Muros</option>
+                                <option>Pavimentación o reencarpetado</option>
+                                <option>Puente peatonal</option>
+                                <option>Rehabilitación de edificios administrativos</option>
+                                <option>Rehabilitación de edificios culturales</option>
+                                <option>Rehabilitación de edificios de salud</option>
+                                <option>Rehabilitación de espacios recreativos</option>
+                                <option>Resumidero</option>
+                                <option>Sectorización</option>
+                                <option>Servicios para dictaminación estructural de edificios</option>
+                                <option>Superposte</option>
+                            </select>
+
+                        </td>
+                    </tr>
+                </table>
+
                 <input class="form-control" type="text" name="formActi" placeholder="Actividades*" />
             </div>
             <div>
